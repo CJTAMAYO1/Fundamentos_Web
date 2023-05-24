@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores CSS combinados</title>
+    <style>
+        /*Selector universal*/
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* Selectores Decendientes */
+        #descendiente p {
+            color: lime;
+        }
+
+        p {
+            color: blue;
+        }
+
+        /*Selector hijo*/
+        #hijo > p {
+            background-color: aqua;
+        }
+
+        #adyacente + p {
+          
+            background-color: red;
+        }
+
+        /*Selector Hermanos*/
+        #hermano ~ div {
+            color: crimson;
+            background-color: orange;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="descendiente">
+        <p>Texto</p>
+        <p>Texto</p>
+        <p>Texto</p>
+    </div>
+    <div id = "hijo">
+        <p>Hijo</p>
+        <p>Hijo</p>
+        <div>
+            <p>nieto</p>
+        </div>
+    </div>
+    <div id = "adyacente">
+        <p>Texto</p>
+        <p>Texto</p>
+        <p>Texto</p>
+    </div>
+    <p>Este esta juntito</p>
+    <p>Esta esta un poco separado</p>
+    
+    <div id="hermano"></div>
+    <div>Hemano</div>
+    <div>Hemano</div>
+</body>
+</html>
